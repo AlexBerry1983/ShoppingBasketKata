@@ -24,5 +24,9 @@ public class ShoppingBasket {
     return this.contents.get(index);
   }
 
+  public void empty() {
+    this.contents.clear();
+  }
+
 
 }
