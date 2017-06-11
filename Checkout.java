@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Checkout {
 
   public long getShoppingBasketPrice(ShoppingBasket basket, Customer customer) {
@@ -14,29 +16,25 @@ public class Checkout {
       return total;
   }
 
-  public int getMatchingItems(ShoppingBasket basket, Item searchedForItem) {
-    int counter = 0;
+  public Arraylist<Item> getBogofItems(ShoppingBasket basket, Item searchedForItem) {
+    ArrayList<Item> bogofItems = new ArrayList<Item>();
     for (Item item : basket.getContents()) {
-      if (item.getDescription().equals(searchedForItem.getDescription())) {
-        counter ++;
+      if (item.getDescription().equals(searchedForItem.getDescription()) && (item.getBogofStatus() == searchedForItem.getBogofStatus())) {
+        bogofItems.add(item);
       }
     }
-    return counter;
+    return bogofItems;
   }
 
-  public boolean getMatchingBogofItems(ShoppingBasket basket, Item searchedForItem) {
-    boolean result = false;
-      for (Item item : basket.getContents()) {
-        if (item.getBogofStatus() == searchedForItem.getBogofStatus()) {
-          result = true;
-        }
-      }
-    return result;
-  }
-
-
-
-
+  // public boolean getMatchingBogofItems(ShoppingBasket basket, Item searchedForItem) {
+  //   boolean result = false;
+  //     for (Item item : basket.getContents()) {
+  //       if (item.getBogofStatus() == searchedForItem.getBogofStatus()) {
+  //         result = true;
+  //       }
+  //     }
+  //   return result;
+  // }
 
 
 }
