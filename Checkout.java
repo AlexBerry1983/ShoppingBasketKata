@@ -12,7 +12,12 @@ public class Checkout {
             total -= (total * 0.02);
           }
       return total;
-    }
+  }
+
+  
+
+
+
 
 
 }
