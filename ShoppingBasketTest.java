@@ -76,15 +76,5 @@ public class ShoppingBasketTest {
     assertEquals(2, basket.getContents().size());
   }
 
-  @Test
-  public void canCountMatchingItemsInBasket() {
-    ShoppingBasket basket = new ShoppingBasket();
-    Item item = new Item("wine", 900, false);
-    Item item2 = new Item("wine", 900, false);
-    Item item3 = new Item("whisky", 1500, false);
-    basket.addItem(item);
-    basket.addItem(item2);
-    basket.addItem(item3);
-    assertEquals(2, basket.getMatchingItems(item));
-  }
+  
 }

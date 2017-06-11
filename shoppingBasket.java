@@ -33,15 +33,7 @@ public class ShoppingBasket {
     this.contents.clear();
   }
 
-  public int getMatchingItems(Item searchedForItem) {
-    int counter = 0;
-    for (Item item : this.contents) {
-      if (item.getDescription().equals(searchedForItem.getDescription())) {
-        counter ++;
-      }
-    }
-    return counter;
-  }
+  
 
 
 }

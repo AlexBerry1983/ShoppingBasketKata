@@ -14,6 +14,16 @@ public class Checkout {
       return total;
   }
 
+  public int getMatchingItems(ShoppingBasket basket, Item searchedForItem) {
+    int counter = 0;
+    for (Item item : basket.getContents()) {
+      if (item.getDescription().equals(searchedForItem.getDescription())) {
+        counter ++;
+      }
+    }
+    return counter;
+  }
+
   public boolean getMatchingBogofItems(ShoppingBasket basket, Item searchedForItem) {
     boolean result = false;
       for (Item item : basket.getContents()) {

@@ -66,6 +66,19 @@ public class CheckoutTest {
     basket.addItem(item3);
     assertEquals(true, checkout.getMatchingBogofItems(basket, item));
   }
+
+  @Test
+  public void canCountMatchingItemsInBasket() {
+    Checkout checkout = new Checkout();
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("wine", 900, false);
+    Item item2 = new Item("wine", 900, false);
+    Item item3 = new Item("whisky", 1500, false);
+    basket.addItem(item);
+    basket.addItem(item2);
+    basket.addItem(item3);
+    assertEquals(2, checkout.getMatchingItems(basket, item));
+  }
   // @Test
   // public void getBogofDiscount() {
   //   Checkout checkout = new Checkout();
