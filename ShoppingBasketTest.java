@@ -60,4 +60,14 @@ public class ShoppingBasketTest {
     assertEquals(0, basket.countItems());
   }
 
+  @Test
+  public void canGetBasketPrice() {
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("peas", 100, false);
+    Item item2 = new Item("rice", 150, false);
+    basket.addItem(item);
+    basket.addItem(item2);
+    assertEquals(250, basket.getTotalPrice());
+  }
+
 }

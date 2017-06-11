@@ -28,7 +28,13 @@ public class ShoppingBasket {
     this.contents.clear();
   }
 
-  
+  public int getTotalPrice() {
+    int total = 0;
+      for (Item item : this.contents) {
+        total += item.getPrice();
+      }
+      return total;
+  }
 
 
 }
