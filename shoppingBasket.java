@@ -33,19 +33,19 @@ public class ShoppingBasket {
     this.contents.clear();
   }
 
-  public long getTotalPrice(Customer customer) {
-    long total = 0;
-      for (Item item : this.contents) {
-        total += item.getPrice();
-      }
-        if (total >= 2000) {
-          total -= (total * 0.1);
-        }
-          if (customer.hasLoyaltyCard() == true) {
-            total -= (total * 0.02);
-          }
-      return total;
-  }
+  // public long getTotalPrice(Customer customer) {
+  //   long total = 0;
+  //     for (Item item : this.contents) {
+  //       total += item.getPrice();
+  //     }
+  //       if (total >= 2000) {
+  //         total -= (total * 0.1);
+  //       }
+  //         if (customer.hasLoyaltyCard() == true) {
+  //           total -= (total * 0.02);
+  //         }
+  //     return total;
+  // }
 
 
 }
