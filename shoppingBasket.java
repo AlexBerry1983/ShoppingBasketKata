@@ -9,6 +9,10 @@ public class ShoppingBasket {
     this.contents = new ArrayList<Item>();
   }
 
+  public ArrayList<Item> getContents() {
+    return this.contents;
+  }
+
   public int countItems() {
     return this.contents.size();
   }

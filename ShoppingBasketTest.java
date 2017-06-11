@@ -92,6 +92,11 @@ public class ShoppingBasketTest {
     basket.addItem(item2);
     assertEquals(2205, basket.getTotalPrice(customer));
   }
-  
+
+  @Test
+  public void canGetContentsOfBasket() {
+    ShoppingBasket basket = new ShoppingBasket();
+    assertEquals(0, basket.getContents().size());
+  }
 
 }
