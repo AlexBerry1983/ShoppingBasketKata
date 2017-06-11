@@ -53,7 +53,19 @@ public class CheckoutTest {
     assertEquals(2,381.4, checkout.getShoppingBasketPrice(basket, customer));
   }
 
-
+  @Test
+  public void checkCanFindMatchingBogofItems() {
+    Checkout checkout = new Checkout();
+    Customer customer = new Customer(true);
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("wine", 900, true);
+    Item item2 = new Item("wine", 900, true);
+    Item item3 = new Item("peas", 200, false);
+    basket.addItem(item);
+    basket.addItem(item2);
+    basket.addItem(item3);
+    assertEquals(true, checkout.getMatchingBogofItems(basket, item));
+  }
   // @Test
   // public void getBogofDiscount() {
   //   Checkout checkout = new Checkout();
