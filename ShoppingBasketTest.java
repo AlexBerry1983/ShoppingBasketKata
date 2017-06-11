@@ -39,4 +39,14 @@ public class ShoppingBasketTest {
     assertEquals(2, basket.countItems());
   }
 
+  @Test
+  public void canFindItemDescription() {
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("peas", 100);
+    Item item2 = new Item("rice", 150);
+    basket.addItem(item);
+    basket.addItem(item2);
+    assertEquals(item2, basket.findItem(1));
+  }
+
 }

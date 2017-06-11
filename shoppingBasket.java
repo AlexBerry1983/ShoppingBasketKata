@@ -20,5 +20,9 @@ public class ShoppingBasket {
     this.contents.remove(index);
   }
 
+  public Item findItem(int index) {
+    return this.contents.get(index);
+  }
+
 
 }
