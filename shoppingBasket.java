@@ -33,6 +33,9 @@ public class ShoppingBasket {
       for (Item item : this.contents) {
         total += item.getPrice();
       }
+        if (total >= 2000) {
+          total -= (total * 0.1);
+        }
       return total;
   }
 

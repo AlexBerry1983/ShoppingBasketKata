@@ -1,7 +1,7 @@
 public class Item {
 
   private String description;
-  private int price;
+  private long price;
   private boolean bogof;
 
   public Item(String description, int price, boolean bogof) {
@@ -14,7 +14,7 @@ public class Item {
     return this.description;
   }
 
-  public int getPrice() {
+  public long getPrice() {
     return this.price;
   }
 

@@ -70,4 +70,14 @@ public class ShoppingBasketTest {
     assertEquals(250, basket.getTotalPrice());
   }
 
+  @Test
+  public void canReduceBasketPriceByTenPercent() {
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("wine", 1000, false);
+    Item item2 = new Item("whisky", 1500, false);
+    basket.addItem(item);
+    basket.addItem(item2);
+    assertEquals(2250, basket.getTotalPrice());
+  }
+
 }
