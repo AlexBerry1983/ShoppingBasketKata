@@ -9,4 +9,12 @@ public class ShoppingBasketTest {
     assertEquals(0, basket.countItems());
   }
 
+  @Test
+  public void canAddItems() {
+    ShoppingBasket basket = new ShoppingBasket();
+    Item item = new Item("peas", 100);
+    basket.addItem(item);
+    assertEquals(1, basket.countItems());
+  }
+
 }
