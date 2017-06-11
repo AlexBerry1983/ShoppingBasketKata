@@ -16,5 +16,9 @@ public class ShoppingBasket {
     this.contents.add(item);
   }
 
+  public void removeItem(int index) {
+    this.contents.remove(index);
+  }
+
 
 }
